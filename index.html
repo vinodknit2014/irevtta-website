@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Green Meadows Society</title>
+  <style>
+    /* ===== Simple Reset ===== */
+    * {box-sizing: border-box; margin: 0; padding: 0}
+    html,body {height: 100%; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#222}
+    a {color: #0b66ff; text-decoration: none}
+    img {max-width:100%; display:block}
+
+    /* ===== Layout ===== */
+    header {background: linear-gradient(90deg,#0b66ff 0%, #2b9cff 100%); color:#fff; padding:18px 0; position:sticky; top:0; z-index:50}
+    .container {width:90%; max-width:1100px; margin:0 auto}
+    header .top {display:flex; align-items:center; justify-content:space-between; gap:12px}
+    header h1 {font-size:1.25rem}
+    nav a {margin-left:14px; color:rgba(255,255,255,0.95); font-weight:600; font-size:0.95rem}
+
+    /* ===== Hero ===== */
+    .hero {display:flex; gap:20px; align-items:center; padding:36px 0}
+    .hero .left {flex:1}
+    .hero h2 {font-size:1.75rem; margin-bottom:10px}
+    .hero p {color:#f0f6ff; margin-bottom:14px}
+    .hero .cta {background:#fff; color:#0b66ff; padding:10px 16px; border-radius:8px; display:inline-block; font-weight:700}
+
+    /* ===== Sections ===== */
+    section {padding:36px 0}
+    section.alt {background:#f7f9ff}
+    h2.section-title {font-size:1.3rem; margin-bottom:14px; color:#0b66ff}
+    .grid {display:grid; gap:16px}
+    .cols-3 {grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card {background:#fff; padding:16px; border-radius:8px; box-shadow:0 6px 18px rgba(15,25,40,0.06)}
+    ul.simple {list-style:disc; margin-left:18px}
+
+    /* ===== Committee & Facilities layout ===== */
+    .committee {display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px}
+    .committee .member {text-align:center; padding:12px}
+
+    /* ===== Notices ===== */
+    .notices {display:flex; flex-direction:column; gap:12px}
+    .notice {padding:12px; border-left:4px solid #0b66ff; background:#fff; border-radius:6px}
+
+    /* ===== Gallery ===== */
+    .gallery {display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:8px}
+
+    /* ===== Contact ===== */
+    .contact-grid {display:grid; grid-template-columns:1fr; gap:12px}
+    .contact-card {padding:12px}
+
+    /* ===== Footer ===== */
+    footer {background:#0c1726; color:#dbe9ff; padding:18px 0; margin-top:18px; font-size:0.9rem; text-align:center}
+
+    /* ===== Responsive tweaks ===== */
+    @media (min-width:720px){
+      .hero {padding:48px 0}
+      header h1 {font-size:1.5rem}
+      .hero h2 {font-size:2rem}
+      .contact-grid {grid-template-columns: 1fr 320px}
+    }
+    /* small utilities */
+    .muted {color:#666; font-size:0.95rem}
+    .pill {display:inline-block; background:#eff6ff; color:#084298; padding:6px 10px; border-radius:999px; font-weight:600; font-size:0.85rem}
+    .small {font-size:0.9rem}
+    .btn {background:#0b66ff;color:#fff;padding:8px 12px;border-radius:8px;display:inline-block;font-weight:700}
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="container top">
+      <div style="display:flex;gap:12px;align-items:center">
+        <img src="" alt="" style="width:44px;height:44px;border-radius:8px;background:#fff24;display:none">
+        <h1>Green Meadows Society</h1>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#committee">Committee</a>
+        <a href="#notices">Notices</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#academics">Academics</a>
+        <a href="#awards">Awards</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / Home -->
+  <main id="home">
+    <section class="hero container" style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0)); border-bottom:1px solid rgba(0,0,0,0.04)">
+      <div class="left">
+        <h2>Welcome to Green Meadows Society</h2>
+        <p class="muted">A safe, friendly and well-managed community. Find notices, committee information, facilities and contact details here.</p>
+        <div style="margin-top:12px">
+          <a href="#notices" class="cta">Latest Notices</a>
+          <a href="#contact" style="margin-left:8px" class="pill">Contact Office</a>
+        </div>
+      </div>
+      <div style="width:320px; text-align:right;">
+        <img src="" alt="Society photo" style="width:320px;height:180px;object-fit:cover;border-radius:8px;background:#eee">
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="card">
+          <p><strong>Green Meadows Society</strong> is a residential community established in 2005. We aim to provide a clean, secure and vibrant environment for families. Our society features a clubhouse, gym, children's play area and ample parking.</p>
+          <p class="muted small" style="margin-top:8px">Address: Block A, Green Meadows, Example City — Pin 123456</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Committee -->
+    <section id="committee" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Committee / Management</h2>
+        <div class="card committee">
+          <div class="member">
+            <strong>Mr. Ravi Kumar</strong><br><span class="muted">President</span><br><span class="small">+91 98765 43210</span>
+          </div>
+          <div class="member">
+            <strong>Ms. Priya Sharma</strong><br><span class="muted">Secretary</span><br><span class="small">+91 98765 98765</span>
+          </div>
+          <div class="member">
+            <strong>Mr. Anil Verma</strong><br><span class="muted">Treasurer</span><br><span class="small">+91 99876 54321</span>
+          </div>
+          <div class="member">
+            <strong>Maintenance</strong><br><span class="muted">Mr. Suresh</span><br><span class="small">+91 91234 56789</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notices -->
+    <section id="notices" class="section">
+      <div class="container">
+        <h2 class="section-title">Notices & Announcements</h2>
+        <div class="notices">
+          <div class="notice card">
+            <strong>Annual General Meeting — 25 Oct 2025</strong>
+            <p class="muted small">AGM will be held at the society clubhouse at 11:00 AM. All members requested to attend.</p>
+          </div>
+          <div class="notice card">
+            <strong>Water Supply Interruption — 10 Sep 2025</strong>
+            <p class="muted small">Municipal maintenance — expect disruption between 10:00 AM to 2:00 PM.</p>
+          </div>
+        </div>
+
+        <!-- Add Notice form (simple, no backend) -->
+        <details style="margin-top:12px">
+          <summary style="cursor:pointer; padding:8px; display:inline-block" class="pill">Add Quick Notice (Admin)</summary>
+          <form id="noticeForm" style="margin-top:8px; display:grid; gap:8px; max-width:600px;">
+            <input id="nTitle" placeholder="Notice title" required style="padding:8px;border-radius:6px;border:1px solid #ddd">
+            <textarea id="nBody" placeholder="Short description" rows="3" style="padding:8px;border-radius:6px;border:1px solid #ddd"></textarea>
+            <div>
+              <button type="submit" class="btn">Add Notice</button>
+            </div>
+            <div class="muted small">This demo form adds notice to the page only (no server). For real usage, connect to a backend or Google Sheets/Netlify forms.</div>
+          </form>
+        </details>
+      </div>
+    </section>
+
+    <!-- Facilities -->
+    <section id="facilities" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Facilities</h2>
+        <div class="grid cols-3">
+          <div class="card">
+            <h4>Clubhouse</h4>
+            <p class="muted small">Available for residents' events. Booking via committee.</p>
+          </div>
+          <div class="card">
+            <h4>Gym</h4>
+            <p class="muted small">Open 6 AM — 10 PM. Managed by the fitness committee.</p>
+          </div>
+          <div class="card">
+            <h4>Swimming Pool</h4>
+            <p class="muted small">Seasonal timings; children must be supervised.</p>
+          </div>
+          <div class="card">
+            <h4>Visitor Parking</h4>
+            <p class="muted small">Limited slots; follow visitor parking rules.</p>
+          </div>
+          <div class="card">
+            <h4>Security</h4>
+            <p class="muted small">24x7 CCTV and security staff on-site.</p>
+          </div>
+          <div class="card">
+            <h4>Garden & Play Area</h4>
+            <p class="muted small">Regular maintenance and gardening schedule.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery">
+          <img src="" alt="Event 1" style="background:#eee;height:140px;border-radius:8px">
+          <img src="" alt="Event 2" style="background:#eee;height:140px;border-radius:8px">
+          <img src="" alt="Event 3" style="background:#eee;height:140px;border-radius:8px">
+          <img src="" alt="Event 4" style="background:#eee;height:140px;border-radius:8px">
+        </div>
+        <p class="muted small" style="margin-top:8px">Tip: replace the image `src` with real photos or use a gallery plugin for lightbox support.</p>
+      </div>
+    </section>
+
+    <!-- Certifications (example: you can reuse from your profile) -->
+    <section id="certifications" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <ul class="simple">
+          <li>Microsoft Certified: Azure Data Fundamentals (DP-900)</li>
+          <li>Microsoft Azure AI Fundamentals (AI-900)</li>
+          <li>Microsoft Azure Fundamentals (AZ-900)</li>
+          <li>Technology Architecture School</li>
+          <li>Agile Foundation</li>
+          <li>Certified Scrum Professional</li>
+          <li>ITIL V3 (Infosys Internal)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Academics -->
+    <section id="academics" class="section">
+      <div class="container">
+        <h2 class="section-title">Academics</h2>
+        <ul class="simple">
+          <li>Bachelor of Engineering (Mechanical), Kamla Nehru Institute of Technology, Sultanpur UP — 2006</li>
+          <li>Higher Secondary Certificate (H.S.C.), Uttar Pradesh Board — 2000 (73.4%)</li>
+          <li>Secondary School Certificate (S.S.C.), CBSE Board — 1998 (72.6%)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Awards & Recognitions -->
+    <section id="awards" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Awards & Recognitions</h2>
+        <ul class="simple">
+          <li>Awarded <strong>Accenture Certified Excellence Award</strong> for handling critical projects as Solution Architect at Accenture.</li>
+          <li>Received a <strong>Q4 OLA Product Choice Award</strong> for contribution to the "Honeybee" product.</li>
+          <li>Honored by <strong>GIS HEAD (Client Certificate)</strong> as Team Player of the Year 2010 at Infosys.</li>
+          <li>Recognized at Unit level with the <strong>BRAVO Award</strong> while at Infosys.</li>
+          <li>Honored by <strong>GIS HEAD (Client Certificate)</strong> as Team Player of the Year 2011 for solving Spain warehouse replenishment issue.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience (optional summary) -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Experience Summary</h2>
+        <div class="card">
+          <p class="muted">Many of our committee members and residents bring professional experience from IT, finance and engineering backgrounds. You can add a link to a detailed 'team CVs' page if needed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-card card">
+            <h4>Society Office</h4>
+            <p class="muted small">Block A, Green Meadows Society<br>Office Hours: Mon–Fri, 10:00 — 17:00</p>
+            <p><strong>Email:</strong> <a href="mailto:info@greenmeadows.local">info@greenmeadows.local</a></p>
+            <p><strong>Phone:</strong> +91 80 1234 5678 (Office)</p>
+            <p><strong>Emergency:</strong> +91 91234 56789 (Security)</p>
+          </div>
+
+          <div class="contact-card card">
+            <h4>Send a Message</h4>
+            <form id="contactForm" style="display:grid;gap:8px">
+              <input id="cname" placeholder="Your name" required style="padding:8px;border-radius:6px;border:1px solid #ddd">
+              <input id="cemail" placeholder="Email" required style="padding:8px;border-radius:6px;border:1px solid #ddd">
+              <textarea id="cmsg" placeholder="Message" rows="4" style="padding:8px;border-radius:6px;border:1px solid #ddd"></textarea>
+              <div><button type="submit" class="btn">Send (demo)</button></div>
+              <div class="muted small">This is a demo form — it will not send email without adding a server or service (Formspree, Netlify Forms, etc.).</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap">
+        <div>&copy; <span id="year"></span> Green Meadows Society</div>
+        <div class="muted">Managed by Committee • <a href="#contact">Contact</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Populate year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Notice form: adds notice to page (no backend)
+    document.getElementById('noticeForm')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      const t = document.getElementById('nTitle').value.trim();
+      const b = document.getElementById('nBody').value.trim();
+      if(!t) return alert('Add a title');
+      const container = document.querySelector('.notices');
+      const div = document.createElement('div');
+      div.className = 'notice card';
+      div.innerHTML = '<strong>' + escapeHtml(t) + '</strong><p class="muted small">' + escapeHtml(b) + '</p>';
+      container.prepend(div);
+      this.reset();
+    });
+
+    // Contact form: demo behavior (opens mail client)
+    document.getElementById('contactForm')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('cname').value.trim();
+      const email = document.getElementById('cemail').value.trim();
+      const msg = document.getElementById('cmsg').value.trim();
+      if(!name || !email || !msg) return alert('Please fill all fields');
+      const subject = encodeURIComponent('Website message from ' + name);
+      const body = encodeURIComponent(msg + "\\n\\nFrom: " + name + " (" + email + ")");
+      // opens mail client (fallback)
+      window.location.href = 'mailto:info@greenmeadows.local?subject=' + subject + '&body=' + body;
+    });
+
+    // Simple XSS escape
+    function escapeHtml(s){ return String(s).replace(/[&<>"']/g, function(m){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m] }) }
+  </script>
+</body>
+</html>
